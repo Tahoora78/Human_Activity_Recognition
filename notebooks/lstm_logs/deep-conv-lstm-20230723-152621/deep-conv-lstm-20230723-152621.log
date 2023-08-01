@@ -1,0 +1,22 @@
+DEBUG: 2023-07-23 15:26:21,816: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/lstm_logs/deep-conv-lstm-20230723-152621/deep-conv-lstm-20230723-152621.log
+DEBUG: 2023-07-23 15:26:33,548: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 15:26:33,549: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-07-23 15:26:33,552: utils.py: check_class_balance: train labels
+DEBUG: 2023-07-23 15:26:33,553: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-07-23 15:26:33,554: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-07-23 15:26:33,555: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-07-23 15:26:33,556: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-07-23 15:26:33,557: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-07-23 15:26:33,559: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-07-23 15:26:33,559: utils.py: check_class_balance: test labels
+DEBUG: 2023-07-23 15:26:33,560: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-07-23 15:26:33,561: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-07-23 15:26:33,562: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-07-23 15:26:33,564: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-07-23 15:26:33,565: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-07-23 15:26:33,566: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-07-23 15:26:33,602: 3941774885.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-07-23 15:26:33,634: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 15:26:33,635: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 15:26:43,774: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 15:26:43,777: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6, 6)

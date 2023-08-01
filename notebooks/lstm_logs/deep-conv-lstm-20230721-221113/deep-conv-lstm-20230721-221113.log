@@ -1,0 +1,23 @@
+DEBUG: 2023-07-21 22:11:14,395: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/lstm_logs/deep-conv-lstm-20230721-221113/deep-conv-lstm-20230721-221113.log
+DEBUG: 2023-07-21 22:11:25,779: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-21 22:11:25,780: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-07-21 22:11:25,783: utils.py: check_class_balance: train labels
+DEBUG: 2023-07-21 22:11:25,784: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-07-21 22:11:25,785: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-07-21 22:11:25,786: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-07-21 22:11:25,786: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-07-21 22:11:25,787: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-07-21 22:11:25,788: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-07-21 22:11:25,789: utils.py: check_class_balance: test labels
+DEBUG: 2023-07-21 22:11:25,790: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-07-21 22:11:25,791: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-07-21 22:11:25,793: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-07-21 22:11:25,793: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-07-21 22:11:25,794: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-07-21 22:11:25,795: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-07-21 22:11:27,999: 3941774885.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-07-21 22:11:28,728: 2770453561.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-21 22:11:28,730: 2770453561.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-21 22:13:46,361: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-21 22:13:46,363: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6, 6)
+WARNING: 2023-07-21 22:13:47,991: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.

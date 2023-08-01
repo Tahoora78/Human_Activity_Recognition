@@ -48,7 +48,7 @@ def main() -> None:
     X_train, X_test = [], []
     y_train, y_test = np.array([]), np.array([])
 
-    # Create features from each row data file
+    # Create features from each raw data file
     for i in tqdm(range(len(acc_files))):
         acc_file, gyro_file = acc_files[i], gyro_files[i]
         exp_id = int(acc_file.split("exp")[1][:2])

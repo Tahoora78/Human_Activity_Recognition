@@ -1,0 +1,93 @@
+DEBUG: 2023-07-19 18:11:51,085: run_lstm.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/logs/deep-conv-lstm-20230719-181151/deep-conv-lstm-20230719-181151.log
+DEBUG: 2023-07-19 18:11:59,932: run_lstm.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:11:59,932: run_lstm.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: train labels
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: test labels
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-07-19 18:11:59,934: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-07-19 18:11:59,935: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-07-19 18:11:59,935: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-07-19 18:11:59,935: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-07-19 18:11:59,935: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-07-19 18:11:59,935: run_lstm.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-07-19 18:11:59,950: run_lstm.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:11:59,950: run_lstm.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-19 18:12:02,172: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:12:02,392: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+WARNING: 2023-07-19 18:12:02,600: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-07-19 18:12:17,394: attrs.py: create: Creating converter from 5 to 3
+DEBUG: 2023-07-19 18:12:40,921: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.0848 - accuracy: 0.9642 - val_loss: 0.0598 - val_accuracy: 0.9811
+DEBUG: 2023-07-19 18:13:06,981: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0402 - accuracy: 0.9872 - val_loss: 0.0473 - val_accuracy: 0.9831
+DEBUG: 2023-07-19 18:13:32,931: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0438 - accuracy: 0.9857 - val_loss: 0.0361 - val_accuracy: 0.9885
+DEBUG: 2023-07-19 18:13:58,940: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0061 - accuracy: 0.9978 - val_loss: 0.0126 - val_accuracy: 0.9973
+DEBUG: 2023-07-19 18:14:24,820: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0148 - accuracy: 0.9956 - val_loss: 0.025 - val_accuracy: 0.9933
+DEBUG: 2023-07-19 18:14:50,786: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0112 - accuracy: 0.997 - val_loss: 0.0112 - val_accuracy: 0.9966
+DEBUG: 2023-07-19 18:15:12,455: attrs.py: __getitem__: Creating converter from 3 to 5
+DEBUG: 2023-07-19 18:15:12,533: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:15:12,767: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:15:20,635: run_lstm.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:15:20,635: run_lstm.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-19 18:15:20,720: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:15:20,969: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+WARNING: 2023-07-19 18:15:21,195: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-07-19 18:15:53,764: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.088 - accuracy: 0.9683 - val_loss: 0.0751 - val_accuracy: 0.9635
+DEBUG: 2023-07-19 18:16:20,233: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.065 - accuracy: 0.9747 - val_loss: 0.0734 - val_accuracy: 0.9642
+DEBUG: 2023-07-19 18:16:46,685: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0465 - accuracy: 0.9804 - val_loss: 0.0775 - val_accuracy: 0.9683
+DEBUG: 2023-07-19 18:17:12,958: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0336 - accuracy: 0.9872 - val_loss: 0.0272 - val_accuracy: 0.9872
+DEBUG: 2023-07-19 18:17:39,284: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0158 - accuracy: 0.9949 - val_loss: 0.0215 - val_accuracy: 0.9932
+DEBUG: 2023-07-19 18:18:05,686: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0097 - accuracy: 0.9971 - val_loss: 0.0122 - val_accuracy: 0.9966
+DEBUG: 2023-07-19 18:18:31,942: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0261 - accuracy: 0.9894 - val_loss: 0.0638 - val_accuracy: 0.9784
+DEBUG: 2023-07-19 18:18:58,076: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.0471 - accuracy: 0.9868 - val_loss: 0.0459 - val_accuracy: 0.9838
+DEBUG: 2023-07-19 18:19:24,320: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0138 - accuracy: 0.9966 - val_loss: 0.019 - val_accuracy: 0.9959
+DEBUG: 2023-07-19 18:19:40,347: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:19:40,561: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:19:48,110: run_lstm.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:19:48,110: run_lstm.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-19 18:19:48,193: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:19:48,451: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+WARNING: 2023-07-19 18:19:48,744: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-07-19 18:20:20,136: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.102 - accuracy: 0.959 - val_loss: 0.1234 - val_accuracy: 0.948
+DEBUG: 2023-07-19 18:20:46,622: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0796 - accuracy: 0.9637 - val_loss: 0.099 - val_accuracy: 0.9683
+DEBUG: 2023-07-19 18:21:13,176: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0598 - accuracy: 0.9742 - val_loss: 0.0679 - val_accuracy: 0.9716
+DEBUG: 2023-07-19 18:21:39,567: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0453 - accuracy: 0.9845 - val_loss: 0.0484 - val_accuracy: 0.9811
+DEBUG: 2023-07-19 18:22:06,109: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0374 - accuracy: 0.9872 - val_loss: 0.0333 - val_accuracy: 0.9878
+DEBUG: 2023-07-19 18:22:32,594: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0143 - accuracy: 0.9941 - val_loss: 0.0179 - val_accuracy: 0.9912
+DEBUG: 2023-07-19 18:22:59,027: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0069 - accuracy: 0.9976 - val_loss: 0.0261 - val_accuracy: 0.9926
+DEBUG: 2023-07-19 18:23:25,521: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.0111 - accuracy: 0.9968 - val_loss: 0.0138 - val_accuracy: 0.9939
+DEBUG: 2023-07-19 18:23:51,906: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0275 - accuracy: 0.9897 - val_loss: 0.0375 - val_accuracy: 0.9885
+DEBUG: 2023-07-19 18:24:18,298: keras_callback.py: on_epoch_end: Epoch 100/10000 - loss: 0.0828 - accuracy: 0.9735 - val_loss: 0.1003 - val_accuracy: 0.9642
+DEBUG: 2023-07-19 18:24:39,595: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:24:39,791: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:24:47,173: run_lstm.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:24:47,173: run_lstm.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-19 18:24:47,239: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:24:47,455: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+WARNING: 2023-07-19 18:24:47,675: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-07-19 18:25:19,191: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.0881 - accuracy: 0.9647 - val_loss: 0.0639 - val_accuracy: 0.9703
+DEBUG: 2023-07-19 18:25:45,945: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0432 - accuracy: 0.9833 - val_loss: 0.0271 - val_accuracy: 0.9912
+DEBUG: 2023-07-19 18:26:12,487: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0262 - accuracy: 0.9919 - val_loss: 0.0162 - val_accuracy: 0.9939
+DEBUG: 2023-07-19 18:26:38,977: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0195 - accuracy: 0.9929 - val_loss: 0.0401 - val_accuracy: 0.9865
+DEBUG: 2023-07-19 18:27:05,590: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0109 - accuracy: 0.9963 - val_loss: 0.01 - val_accuracy: 0.9966
+DEBUG: 2023-07-19 18:27:32,042: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0063 - accuracy: 0.998 - val_loss: 0.0179 - val_accuracy: 0.9953
+DEBUG: 2023-07-19 18:27:58,476: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0114 - accuracy: 0.9965 - val_loss: 0.0183 - val_accuracy: 0.9946
+DEBUG: 2023-07-19 18:28:24,890: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.041 - accuracy: 0.9872 - val_loss: 0.0332 - val_accuracy: 0.9912
+DEBUG: 2023-07-19 18:28:51,133: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0158 - accuracy: 0.9961 - val_loss: 0.01 - val_accuracy: 0.9973
+DEBUG: 2023-07-19 18:29:17,363: keras_callback.py: on_epoch_end: Epoch 100/10000 - loss: 0.0941 - accuracy: 0.9769 - val_loss: 0.0547 - val_accuracy: 0.9824
+DEBUG: 2023-07-19 18:29:38,638: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:29:38,828: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:29:45,942: run_lstm.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-19 18:29:45,942: run_lstm.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-19 18:29:46,009: lstm.py: __init__: Layer lstm will use cuDNN kernels when running on GPU.
+DEBUG: 2023-07-19 18:29:46,217: lstm.py: __init__: Layer lstm_1 will use cuDNN kernels when running on GPU.
+WARNING: 2023-07-19 18:29:46,428: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-07-19 18:30:18,304: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.0771 - accuracy: 0.9698 - val_loss: 0.075 - val_accuracy: 0.9669
+DEBUG: 2023-07-19 18:30:44,827: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0702 - accuracy: 0.9764 - val_loss: 0.0593 - val_accuracy: 0.9764
+DEBUG: 2023-07-19 18:31:11,437: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0259 - accuracy: 0.9902 - val_loss: 0.0298 - val_accuracy: 0.9899
+DEBUG: 2023-07-19 18:31:37,694: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0136 - accuracy: 0.9948 - val_loss: 0.0295 - val_accuracy: 0.9899
+DEBUG: 2023-07-19 18:32:04,166: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0205 - accuracy: 0.9938 - val_loss: 0.0169 - val_accuracy: 0.9939

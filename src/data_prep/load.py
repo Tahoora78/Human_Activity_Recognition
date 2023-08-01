@@ -104,10 +104,6 @@ def load_raw_data(
         act2label (Dict[str, int]): Dict of title_of_class to label_id
     """
     X_train, X_test = preprocess_raw_data(scaler=scaler)
-    # X_train = np.load(os.path.join(DATA_DIR, "my_dataset/Raw_X_train.npy"))
-    # X_test = np.load(os.path.join(DATA_DIR, "my_dataset/Raw_X_test.npy"))
-    # y_train = np.loadtxt(os.path.join(DATA_DIR, "my_dataset/y_train.txt"))
-    # y_test = np.loadtxt(os.path.join(DATA_DIR, "my_dataset/y_test.txt"))
 
     y_train = pd.read_table(os.path.join(DATA_DIR, "my_dataset/y_train.txt"), sep=" ", header=None)
     y_test = pd.read_table(os.path.join(DATA_DIR, "my_dataset/y_test.txt"), sep=" ", header=None)

@@ -5,10 +5,16 @@ from typing import Any, Dict, List, Tuple
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Dense, Activation, Dropout, Flatten, Conv2D
-from tensorflow.keras import optimizers
-from tensorflow.keras import backend as K
+from keras.models import Sequential, Model
+from keras.layers import LeakyReLU
+from keras.layers import Dense, Activation, Dropout, Flatten, Conv2D, Conv1D
+from keras import optimizers
+from keras import backend as K
+from keras.callbacks import ModelCheckpoint, LearningRateScheduler, EarlyStopping
+
+from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+
 
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
@@ -45,7 +51,7 @@ def train_and_predict(
         model=model,
         path_chpt=f"{LOG_DIR}/trained_model_fold{fold_id}.h5",
         verbose=10,
-        epochs=cnn_params["epochs"],
+        epochs=cnn_params["epochs"]
     )
 
     fit = model.fit(
@@ -69,28 +75,81 @@ def train_and_predict(
     return pred_train, pred_valid, pred_test, model
 
 
+
 def build_baseline(
     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
 ) -> Model:
     model = Sequential()
-    model.add(Conv2D(64, kernel_size=(5, 1), input_shape=input_shape))
-    model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
-    model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
-    model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
-    model.add(Activation("relu"))
+    model.add(Conv1D(filters=32, kernel_size=3, activation='relu', input_shape=(128, 6)))
+    # model.add(Conv1D(filters=64, kernel_size=3, activation='relu', padding = 'same'))
+    model.add(Dropout(0.5))
+    model.add(MaxPooling1D(pool_size=2))
     model.add(Flatten())
-    model.add(Dense(128))
-    model.add(Activation("relu"))
-    model.add(Dropout(0.5, seed=0))
-    model.add(Dense(128))
-    model.add(Activation("relu"))
-    model.add(Dropout(0.5, seed=1))
-    model.add(Dense(output_dim))
-    model.add(Activation("softmax"))
-    model.compile(
-        loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
-    )
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(6, activation='softmax'))
+    checkpoint = ModelCheckpoint("har_weights.h5", monitor='val_acc', verbose=1, 
+                             save_best_only=True, save_weights_only=False, mode='auto', save_freq=2)
+    model.compile(loss='categorical_crossentropy', optimizer=optimizers.Adam(learning_rate=lr), metrics=['accuracy'])
+
     return model
+
+
+
+# def build_baseline(
+#     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
+# ) -> Model:
+#     model = Sequential()
+#     model.add(Conv2D(64, kernel_size=(5, 1), input_shape=input_shape))
+#     model.add(Activation("relu"))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation("relu"))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation("relu"))
+#     # model.add(Conv2D(64, kernel_size=(5, 1)))
+#     # model.add(Activation("relu"))
+#     # model.add(Conv2D(64, kernel_size=(5, 1)))
+#     # model.add(Activation("relu"))
+#     model.add(Flatten())
+#     model.add(Dense(128))
+#     model.add(Activation("relu"))
+#     model.add(Dropout(0.5, seed=0))
+#     model.add(Dense(128))
+#     model.add(Activation("relu"))
+#     model.add(Dropout(0.5, seed=1))
+#     model.add(Dense(output_dim))
+#     model.add(Activation("softmax"))
+#     model.compile(
+#         loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
+#     )
+#     return model
+
+
+
+
+# def build_baseline(
+#     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
+# ) -> Model:
+#     model = Sequential()
+#     model.add(Conv2D(64, kernel_size=(5, 1), input_shape=input_shape))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Conv2D(64, kernel_size=(5, 1)))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Flatten())
+#     model.add(Dense(128))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Dropout(0.5, seed=0))
+#     model.add(Dense(128))
+#     model.add(Activation(LeakyReLU()))
+#     model.add(Dropout(0.5, seed=1))
+#     model.add(Dense(output_dim))
+#     model.add(Activation("softmax"))
+#     model.compile(
+#         loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
+#     )
+#     return model

@@ -1,0 +1,132 @@
+DEBUG: 2023-07-23 16:56:56,906: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/lstm_logs/deep-conv-lstm-20230723-165656/deep-conv-lstm-20230723-165656.log
+DEBUG: 2023-07-23 16:57:09,170: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 16:57:09,171: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-07-23 16:57:09,175: utils.py: check_class_balance: train labels
+DEBUG: 2023-07-23 16:57:09,176: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-07-23 16:57:09,176: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-07-23 16:57:09,177: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-07-23 16:57:09,178: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-07-23 16:57:09,178: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-07-23 16:57:09,180: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-07-23 16:57:09,181: utils.py: check_class_balance: test labels
+DEBUG: 2023-07-23 16:57:09,183: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-07-23 16:57:09,184: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-07-23 16:57:09,185: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-07-23 16:57:09,186: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-07-23 16:57:09,187: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-07-23 16:57:09,188: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-07-23 16:57:09,219: 3941774885.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-07-23 16:57:09,295: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 16:57:09,296: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 16:57:25,727: attrs.py: create: Creating converter from 5 to 3
+DEBUG: 2023-07-23 16:57:37,835: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.2935 - accuracy: 0.906 - val_loss: 0.1555 - val_accuracy: 0.944
+DEBUG: 2023-07-23 16:57:51,063: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0855 - accuracy: 0.9613 - val_loss: 0.0913 - val_accuracy: 0.9663
+DEBUG: 2023-07-23 16:58:04,281: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.081 - accuracy: 0.9629 - val_loss: 0.1044 - val_accuracy: 0.9649
+DEBUG: 2023-07-23 16:58:17,478: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0937 - accuracy: 0.9578 - val_loss: 0.0665 - val_accuracy: 0.971
+DEBUG: 2023-07-23 16:58:30,612: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0693 - accuracy: 0.964 - val_loss: 0.0587 - val_accuracy: 0.9723
+DEBUG: 2023-07-23 16:58:43,893: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.1089 - accuracy: 0.962 - val_loss: 0.0944 - val_accuracy: 0.973
+DEBUG: 2023-07-23 16:58:57,179: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0566 - accuracy: 0.9782 - val_loss: 0.0519 - val_accuracy: 0.9818
+DEBUG: 2023-07-23 16:59:10,580: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.0638 - accuracy: 0.9735 - val_loss: 0.0617 - val_accuracy: 0.9825
+DEBUG: 2023-07-23 16:59:23,821: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0556 - accuracy: 0.9764 - val_loss: 0.0504 - val_accuracy: 0.9838
+DEBUG: 2023-07-23 16:59:37,268: keras_callback.py: on_epoch_end: Epoch 100/10000 - loss: 0.0351 - accuracy: 0.9862 - val_loss: 0.0343 - val_accuracy: 0.9865
+DEBUG: 2023-07-23 16:59:50,686: keras_callback.py: on_epoch_end: Epoch 110/10000 - loss: 0.0207 - accuracy: 0.9889 - val_loss: 0.0272 - val_accuracy: 0.9906
+DEBUG: 2023-07-23 17:00:03,974: keras_callback.py: on_epoch_end: Epoch 120/10000 - loss: 0.0571 - accuracy: 0.9737 - val_loss: 0.0563 - val_accuracy: 0.9717
+DEBUG: 2023-07-23 17:00:17,268: keras_callback.py: on_epoch_end: Epoch 130/10000 - loss: 0.0527 - accuracy: 0.9748 - val_loss: 0.046 - val_accuracy: 0.9798
+DEBUG: 2023-07-23 17:00:29,516: attrs.py: __getitem__: Creating converter from 3 to 5
+DEBUG: 2023-07-23 17:00:37,510: 2623015374.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 17:00:37,511: 2623015374.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 17:00:57,483: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.1405 - accuracy: 0.9487 - val_loss: 0.1098 - val_accuracy: 0.9561
+DEBUG: 2023-07-23 17:01:10,821: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.1031 - accuracy: 0.9617 - val_loss: 0.1501 - val_accuracy: 0.9264
+DEBUG: 2023-07-23 17:01:24,226: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.1321 - accuracy: 0.9554 - val_loss: 0.123 - val_accuracy: 0.9473
+DEBUG: 2023-07-23 17:01:37,595: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0978 - accuracy: 0.9639 - val_loss: 0.1082 - val_accuracy: 0.9494
+DEBUG: 2023-07-23 17:01:51,007: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0688 - accuracy: 0.9661 - val_loss: 0.0617 - val_accuracy: 0.9656
+DEBUG: 2023-07-23 17:02:04,345: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0787 - accuracy: 0.9722 - val_loss: 0.0661 - val_accuracy: 0.9696
+DEBUG: 2023-07-23 17:02:17,827: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0879 - accuracy: 0.9637 - val_loss: 0.0656 - val_accuracy: 0.9723
+DEBUG: 2023-07-23 17:02:31,311: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.071 - accuracy: 0.9652 - val_loss: 0.067 - val_accuracy: 0.9602
+DEBUG: 2023-07-23 17:02:44,588: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0693 - accuracy: 0.9733 - val_loss: 0.1397 - val_accuracy: 0.9446
+DEBUG: 2023-07-23 17:02:57,910: keras_callback.py: on_epoch_end: Epoch 100/10000 - loss: 0.0585 - accuracy: 0.9792 - val_loss: 0.0607 - val_accuracy: 0.975
+DEBUG: 2023-07-23 17:03:15,164: 2623015374.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 17:03:15,165: 2623015374.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 17:03:34,863: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.0944 - accuracy: 0.96 - val_loss: 0.1368 - val_accuracy: 0.9521
+DEBUG: 2023-07-23 17:03:48,271: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0869 - accuracy: 0.9625 - val_loss: 0.1002 - val_accuracy: 0.9608
+DEBUG: 2023-07-23 17:04:01,889: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0625 - accuracy: 0.9701 - val_loss: 0.0693 - val_accuracy: 0.9737
+DEBUG: 2023-07-23 17:04:15,187: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0681 - accuracy: 0.9705 - val_loss: 0.0841 - val_accuracy: 0.9649
+DEBUG: 2023-07-23 17:04:28,497: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.1111 - accuracy: 0.9598 - val_loss: 0.0925 - val_accuracy: 0.9615
+DEBUG: 2023-07-23 17:04:41,844: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0693 - accuracy: 0.9738 - val_loss: 0.0741 - val_accuracy: 0.9703
+DEBUG: 2023-07-23 17:04:55,412: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0618 - accuracy: 0.9705 - val_loss: 0.1032 - val_accuracy: 0.9521
+DEBUG: 2023-07-23 17:05:08,837: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.0777 - accuracy: 0.971 - val_loss: 0.0953 - val_accuracy: 0.9689
+DEBUG: 2023-07-23 17:05:22,208: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0524 - accuracy: 0.9782 - val_loss: 0.0794 - val_accuracy: 0.9656
+DEBUG: 2023-07-23 17:05:39,757: 2623015374.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 17:05:39,758: 2623015374.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 17:05:59,684: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.1211 - accuracy: 0.9573 - val_loss: 0.1109 - val_accuracy: 0.9595
+DEBUG: 2023-07-23 17:06:13,349: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.073 - accuracy: 0.9711 - val_loss: 0.0791 - val_accuracy: 0.9635
+DEBUG: 2023-07-23 17:06:26,923: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0603 - accuracy: 0.9769 - val_loss: 0.0713 - val_accuracy: 0.9743
+DEBUG: 2023-07-23 17:06:40,446: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0445 - accuracy: 0.9857 - val_loss: 0.0367 - val_accuracy: 0.9858
+DEBUG: 2023-07-23 17:06:53,916: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0336 - accuracy: 0.9905 - val_loss: 0.0697 - val_accuracy: 0.973
+DEBUG: 2023-07-23 17:07:07,597: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0375 - accuracy: 0.9877 - val_loss: 0.0341 - val_accuracy: 0.9885
+DEBUG: 2023-07-23 17:07:21,159: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0263 - accuracy: 0.9924 - val_loss: 0.0311 - val_accuracy: 0.9912
+DEBUG: 2023-07-23 17:07:34,668: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.038 - accuracy: 0.9892 - val_loss: 0.0416 - val_accuracy: 0.9818
+DEBUG: 2023-07-23 17:07:48,233: keras_callback.py: on_epoch_end: Epoch 90/10000 - loss: 0.0156 - accuracy: 0.9951 - val_loss: 0.0259 - val_accuracy: 0.9926
+DEBUG: 2023-07-23 17:08:01,690: keras_callback.py: on_epoch_end: Epoch 100/10000 - loss: 0.0189 - accuracy: 0.9936 - val_loss: 0.0218 - val_accuracy: 0.9926
+DEBUG: 2023-07-23 17:08:15,204: keras_callback.py: on_epoch_end: Epoch 110/10000 - loss: 0.0468 - accuracy: 0.986 - val_loss: 0.056 - val_accuracy: 0.9797
+DEBUG: 2023-07-23 17:08:34,384: 2623015374.py: <module>: X_tr.shape=(5925, 128, 6, 1) X_val.shape=(1481, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-07-23 17:08:34,385: 2623015374.py: <module>: y_tr.shape=(5925, 6) y_val.shape=(1481, 6) y_test.shape=(2993, 6)
+DEBUG: 2023-07-23 17:08:55,214: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.2541 - accuracy: 0.9259 - val_loss: 0.1181 - val_accuracy: 0.9568
+DEBUG: 2023-07-23 17:09:08,849: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.0867 - accuracy: 0.9641 - val_loss: 0.0828 - val_accuracy: 0.9642
+DEBUG: 2023-07-23 17:09:22,520: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.0708 - accuracy: 0.9759 - val_loss: 0.0695 - val_accuracy: 0.9716
+DEBUG: 2023-07-23 17:09:36,158: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.0674 - accuracy: 0.9716 - val_loss: 0.0721 - val_accuracy: 0.9764
+DEBUG: 2023-07-23 17:09:49,788: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.0884 - accuracy: 0.97 - val_loss: 0.0728 - val_accuracy: 0.9723
+DEBUG: 2023-07-23 17:10:03,571: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.0628 - accuracy: 0.9792 - val_loss: 0.0628 - val_accuracy: 0.977
+DEBUG: 2023-07-23 17:10:17,148: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.0455 - accuracy: 0.9843 - val_loss: 0.0605 - val_accuracy: 0.9757
+DEBUG: 2023-07-23 17:10:30,559: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.0579 - accuracy: 0.9764 - val_loss: 0.1157 - val_accuracy: 0.9669
+DEBUG: 2023-07-23 17:10:41,954: 2155350369.py: <module>: ---Cross Validation Scores---
+DEBUG: 2023-07-23 17:10:41,956: 2155350369.py: <module>: ---train---
+DEBUG: 2023-07-23 17:10:41,957: 2155350369.py: <module>: logloss=0.032095
+DEBUG: 2023-07-23 17:10:41,957: 2155350369.py: <module>: accuracy=0.987544
+DEBUG: 2023-07-23 17:10:41,958: 2155350369.py: <module>: precision=0.988976
+DEBUG: 2023-07-23 17:10:41,959: 2155350369.py: <module>: recall=0.98846
+DEBUG: 2023-07-23 17:10:41,960: 2155350369.py: <module>: f1=0.988611
+DEBUG: 2023-07-23 17:10:41,961: 2155350369.py: <module>: per-class f1={'LAYING': 1.0, 'WALKING': 1.0, 'WALKING_UPSTAIRS': 1.0, 'WALKING_DOWNSTAIRS': 1.0, 'SITTING': 0.963723, 'STANDING': 0.967945}
+DEBUG: 2023-07-23 17:10:41,962: 2155350369.py: <module>: ---valid---
+DEBUG: 2023-07-23 17:10:41,962: 2155350369.py: <module>: logloss=0.038535
+DEBUG: 2023-07-23 17:10:41,963: 2155350369.py: <module>: accuracy=0.984606
+DEBUG: 2023-07-23 17:10:41,964: 2155350369.py: <module>: precision=0.98613
+DEBUG: 2023-07-23 17:10:41,965: 2155350369.py: <module>: recall=0.985755
+DEBUG: 2023-07-23 17:10:41,966: 2155350369.py: <module>: f1=0.985835
+DEBUG: 2023-07-23 17:10:41,967: 2155350369.py: <module>: per-class f1={'LAYING': 1.0, 'WALKING': 0.998773, 'WALKING_UPSTAIRS': 1.0, 'WALKING_DOWNSTAIRS': 0.998484, 'SITTING': 0.95637, 'STANDING': 0.961383}
+DEBUG: 2023-07-23 17:10:41,968: 2155350369.py: <module>: ---test---
+DEBUG: 2023-07-23 17:10:41,969: 2155350369.py: <module>: logloss=0.444434
+DEBUG: 2023-07-23 17:10:41,969: 2155350369.py: <module>: accuracy=0.931106
+DEBUG: 2023-07-23 17:10:41,971: 2155350369.py: <module>: precision=0.931802
+DEBUG: 2023-07-23 17:10:41,971: 2155350369.py: <module>: recall=0.933166
+DEBUG: 2023-07-23 17:10:41,972: 2155350369.py: <module>: f1=0.931187
+DEBUG: 2023-07-23 17:10:41,973: 2155350369.py: <module>: per-class f1={'LAYING': 0.996357, 'WALKING': 0.944432, 'WALKING_UPSTAIRS': 0.956289, 'WALKING_DOWNSTAIRS': 0.92941, 'SITTING': 0.86873, 'STANDING': 0.891904}
+DEBUG: 2023-07-23 17:10:41,980: 1695527446.py: <module>: ---Final Test Scores Averaged over Folds---
+DEBUG: 2023-07-23 17:10:41,983: 1695527446.py: <module>: accuracy=0.9432008018710324
+DEBUG: 2023-07-23 17:10:41,986: 1695527446.py: <module>: precision=0.9434159990050074
+DEBUG: 2023-07-23 17:10:41,989: 1695527446.py: <module>: recall=0.9450089103856413
+DEBUG: 2023-07-23 17:10:41,992: 1695527446.py: <module>: f1=0.9430554559814097
+DEBUG: 2023-07-23 17:10:41,996: 1695527446.py: <module>: per-class f1=[1.         0.94947368 0.96581197 0.92976589 0.90116279 0.91211841]
+DEBUG: 2023-07-23 17:11:17,341: 2155350369.py: <module>: ---Cross Validation Scores---
+DEBUG: 2023-07-23 17:11:17,344: 2155350369.py: <module>: ---train---
+DEBUG: 2023-07-23 17:11:17,345: 2155350369.py: <module>: logloss=0.032095
+DEBUG: 2023-07-23 17:11:17,346: 2155350369.py: <module>: accuracy=0.987544
+DEBUG: 2023-07-23 17:11:17,347: 2155350369.py: <module>: precision=0.988976
+DEBUG: 2023-07-23 17:11:17,348: 2155350369.py: <module>: recall=0.98846
+DEBUG: 2023-07-23 17:11:17,349: 2155350369.py: <module>: f1=0.988611
+DEBUG: 2023-07-23 17:11:17,350: 2155350369.py: <module>: per-class f1={'LAYING': 1.0, 'WALKING': 1.0, 'WALKING_UPSTAIRS': 1.0, 'WALKING_DOWNSTAIRS': 1.0, 'SITTING': 0.963723, 'STANDING': 0.967945}
+DEBUG: 2023-07-23 17:11:17,351: 2155350369.py: <module>: ---valid---
+DEBUG: 2023-07-23 17:11:17,351: 2155350369.py: <module>: logloss=0.038535
+DEBUG: 2023-07-23 17:11:17,352: 2155350369.py: <module>: accuracy=0.984606
+DEBUG: 2023-07-23 17:11:17,353: 2155350369.py: <module>: precision=0.98613
+DEBUG: 2023-07-23 17:11:17,354: 2155350369.py: <module>: recall=0.985755
+DEBUG: 2023-07-23 17:11:17,354: 2155350369.py: <module>: f1=0.985835
+DEBUG: 2023-07-23 17:11:17,355: 2155350369.py: <module>: per-class f1={'LAYING': 1.0, 'WALKING': 0.998773, 'WALKING_UPSTAIRS': 1.0, 'WALKING_DOWNSTAIRS': 0.998484, 'SITTING': 0.95637, 'STANDING': 0.961383}
+DEBUG: 2023-07-23 17:11:17,356: 2155350369.py: <module>: ---test---
+DEBUG: 2023-07-23 17:11:17,357: 2155350369.py: <module>: logloss=0.444434
+DEBUG: 2023-07-23 17:11:17,358: 2155350369.py: <module>: accuracy=0.931106
+DEBUG: 2023-07-23 17:11:17,358: 2155350369.py: <module>: precision=0.931802
+DEBUG: 2023-07-23 17:11:17,359: 2155350369.py: <module>: recall=0.933166
+DEBUG: 2023-07-23 17:11:17,360: 2155350369.py: <module>: f1=0.931187
+DEBUG: 2023-07-23 17:11:17,361: 2155350369.py: <module>: per-class f1={'LAYING': 0.996357, 'WALKING': 0.944432, 'WALKING_UPSTAIRS': 0.956289, 'WALKING_DOWNSTAIRS': 0.92941, 'SITTING': 0.86873, 'STANDING': 0.891904}
+DEBUG: 2023-07-23 17:11:19,738: 1695527446.py: <module>: ---Final Test Scores Averaged over Folds---

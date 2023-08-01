@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Dense, Activation, Dropout, Conv2D, LSTM, Reshape
+from tensorflow.keras.layers import Dense, Activation, Dropout, Conv2D, LSTM, Reshape, Conv1D
 from tensorflow.keras import optimizers
 from tensorflow.keras import backend as K
 
@@ -72,23 +72,45 @@ def train_and_predict(
 def build_model(
     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
 ) -> Model:
+    # model = Sequential()
+    # model.add(Conv1D(64, kernel_size=3, input_shape=input_shape))
+    # model.add(Activation("relu"))
+    # model.add(Conv1D(64, kernel_size=3))
+    # model.add(Activation("relu"))
+    # # model.add(Conv1D(64, kernel_size=5))
+    # # model.add(Activation("relu"))
+    # # model.add(Conv2D(64, kernel_size=(5,1)))
+    # # model.add(Activation("relu"))
+    # model.add(Reshape((128, 2 * 64)))
+    # model.add(LSTM(128, activation="tanh", return_sequences=True))
+    # model.add(Dropout(0.5, seed=0))
+    # # model.add(LSTM(128, activation="tanh"))
+    # # model.add(Dropout(0.5, seed=1))
+    # model.add(Dense(output_dim))
+    # model.add(Activation("softmax"))
+    # model.compile(
+    #     loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
+    # )
     model = Sequential()
-    model.add(Conv2D(64, kernel_size=(5, 1), input_shape=input_shape))
+    model.add(Conv1D(32, kernel_size=3, input_shape=(128, 6)))
     model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
+    model.add(Conv1D(32, kernel_size=3))
     model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
-    model.add(Activation("relu"))
-    model.add(Conv2D(64, kernel_size=(5, 1)))
-    model.add(Activation("relu"))
-    model.add(Reshape((112, 6 * 64)))
+    # model.add(Conv1D(64, kernel_size=5))
+    # model.add(Activation("relu"))
+    # model.add(Conv2D(64, kernel_size=(5,1)))
+    # model.add(Activation("relu"))
+    model.add(Reshape((124, 32)))
     model.add(LSTM(128, activation="tanh", return_sequences=True))
     model.add(Dropout(0.5, seed=0))
     model.add(LSTM(128, activation="tanh"))
     model.add(Dropout(0.5, seed=1))
-    model.add(Dense(output_dim))
+    model.add(LSTM(128, activation="tanh"))
+    model.add(Dropout(0.5, seed=1))
+    model.add(Dense(6))
     model.add(Activation("softmax"))
     model.compile(
-        loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
+        loss="categorical_crossentropy", optimizer=optimizers.Adam(learning_rate=lr), metrics=["accuracy"]
     )
+
     return model
