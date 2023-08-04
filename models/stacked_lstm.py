@@ -11,6 +11,7 @@ from tensorflow.keras import backend as K
 
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
+from tensorflow.keras import regularizers
 
 tf.random.set_seed(0)
 
@@ -74,16 +75,16 @@ def build_model(
 ) -> Model:
     model=Sequential()
     # Adding first LSTM layer
-    model.add(LSTM(25,return_sequences=True,input_shape=(128, 6)))
+    model.add(LSTM(25,return_sequences=True,input_shape=(128, 6), kernel_regularizer = regularizers.l2(0.01)))
     model.add(Dropout(0.3)) # Dropout regularisation
     # second LSTM layer 
-    model.add(LSTM(25,return_sequences=True))
+    model.add(LSTM(16,return_sequences=True))
     # Adding third LSTM layer 
-    model.add(LSTM(25, return_sequences=True))
+    model.add(LSTM(25))
     model.add(Dropout(0.3))
     # Adding fourth LSTM layer
-    model.add(LSTM(25))
-    model.add(Dropout(0.2))
+    # model.add(LSTM(16))
+    # model.add(Dropout(0.3))
     # Adding the Output Layer
     model.add(Dense(output_dim, activation = 'softmax'))
     # Compile model

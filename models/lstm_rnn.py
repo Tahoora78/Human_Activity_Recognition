@@ -11,6 +11,7 @@ from tensorflow.keras import backend as K
 
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
+from tensorflow.keras import regularizers
 
 tf.random.set_seed(0)
 
@@ -73,11 +74,13 @@ def build_model(
 ) -> Model:
     model = Sequential()
     # RNN layer
-    model.add(LSTM(units = 128, input_shape = (128, 6)))
+    model.add(LSTM(units = 32, input_shape = (128, 6), kernel_regularizer = regularizers.l2(0.01)))
+    # model.add(Dropout(0.5)) 
+    # model.add(LSTM(units = 32, return_sequences=False))
     # Dropout layer
     model.add(Dropout(0.5)) 
     # Dense layer with ReLu
-    model.add(Dense(units = 64, activation='relu'))
+    model.add(Dense(units = 32, activation='relu'))
     # Softmax layer
     model.add(Dense(output_dim, activation = 'softmax'))
     # Compile model

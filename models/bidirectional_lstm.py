@@ -1,4 +1,3 @@
-"""Functions for training Deep Convolutional LSTM (DeepConvLSTM)"""
 import os
 from typing import Any, Dict, List, Tuple
 
@@ -9,10 +8,12 @@ from tensorflow.keras.models import Sequential, Model
 from tensorflow.keras.layers import Dense, Activation, Dropout, Conv2D, LSTM, Reshape
 from tensorflow.keras import optimizers
 from tensorflow.keras import backend as K
-from tensorflow.keras.layers import Bidirectional
 
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
+from tensorflow.keras import regularizers
+
+from keras.layers import Bidirectional
 
 tf.random.set_seed(0)
 
@@ -25,9 +26,9 @@ def train_and_predict(
     X_test: np.ndarray,
     y_train: np.ndarray,
     y_valid: np.ndarray,
-    cnn_params: Dict[str, Any],
+    dcl_params: Dict[str, Any],
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, Model]:
-    """Train CNN
+    """Train RnnLSTM
     Args:
         X_train, X_valid, X_test: input signals of shape (num_samples, window_size, num_channels, 1)
         y_train, y_valid, y_test: onehot-encoded labels
@@ -37,8 +38,8 @@ def train_and_predict(
         pred_test: train prediction
         model: trained best model
     """
-    model = build_baseline(
-        input_shape=X_train.shape[1:], output_dim=y_train.shape[1], lr=cnn_params["lr"]
+    model = build_model(
+        input_shape=X_train.shape[1:], output_dim=y_train.shape[1], lr=dcl_params["lr"]
     )
     # plot_model(model, path=f"{LOG_DIR}/model.png")
 
@@ -46,15 +47,15 @@ def train_and_predict(
         model=model,
         path_chpt=f"{LOG_DIR}/trained_model_fold{fold_id}.h5",
         verbose=10,
-        epochs=cnn_params["epochs"]
+        epochs=dcl_params["epochs"],
     )
 
     fit = model.fit(
         X_train,
         y_train,
-        batch_size=cnn_params["batch_size"],
-        epochs=cnn_params["epochs"],
-        verbose=cnn_params["verbose"],
+        batch_size=dcl_params["batch_size"],
+        epochs=dcl_params["epochs"],
+        verbose=dcl_params["verbose"],
         validation_data=(X_valid, y_valid),
         callbacks=callbacks,
     )
@@ -70,16 +71,19 @@ def train_and_predict(
     return pred_train, pred_valid, pred_test, model
 
 
-
-def build_baseline(
+def build_model(
     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
 ) -> Model:
     model = Sequential()
-    model.add(Bidirectional(LSTM(100, activation='relu', input_shape=(128, 6)))) #elu
-    model.add(Bidirectional(LSTM(100, dropout=0.5)))
-
-    # model.add(Bidirectional(LSTM(100, dropout=0.5)))
-    # model.add(BatchNormalization(momentum=0.6))
+    # RNN layer
+    model.add(Bidirectional(LSTM(units = 32, kernel_regularizer = regularizers.l2(0.01)), input_shape = (128, 6)))
+    # model.add(Dropout(0.5)) 
+    # model.add(LSTM(units = 32, return_sequences=False))
+    # Dropout layer
+    model.add(Dropout(0.5)) 
+    # Dense layer with ReLu
+    model.add(Dense(units = 32, activation='relu'))
+    # Softmax layer
     model.add(Dense(output_dim, activation = 'softmax'))
     # Compile model
     model.compile(loss='categorical_crossentropy', optimizer=optimizers.Adam(lr=lr), metrics=['accuracy'])

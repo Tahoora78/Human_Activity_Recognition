@@ -22,7 +22,7 @@
     "cnn_params": {
         "batch_size": 128,
         "epochs": 10000,
-        "lr": 0.0001,
+        "lr": 0.001,
         "verbose": 1
     },
     "mlp_params": {
@@ -49,7 +49,7 @@
         "lr": 0.001,
         "verbose": 0
     },
-    "bidirectional_lstm": {
+    "bidirectional_lstm_params": {
         "batch_size": 128,
         "epochs": 10000,
         "lr": 0.001,

@@ -1,0 +1,30 @@
+DEBUG: 2023-08-02 01:29:57,754: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/../logs/rnn_lstm_logs/deep-conv-lstm-20230802-012957/deep-conv-lstm-20230802-012957.log
+DEBUG: 2023-08-02 01:30:08,786: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-08-02 01:30:08,787: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-08-02 01:30:08,790: utils.py: check_class_balance: train labels
+DEBUG: 2023-08-02 01:30:08,791: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-08-02 01:30:08,792: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-08-02 01:30:08,793: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-08-02 01:30:08,794: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-08-02 01:30:08,795: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-08-02 01:30:08,796: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-08-02 01:30:08,796: utils.py: check_class_balance: test labels
+DEBUG: 2023-08-02 01:30:08,797: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-08-02 01:30:08,798: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-08-02 01:30:08,798: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-08-02 01:30:08,799: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-08-02 01:30:08,801: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-08-02 01:30:08,801: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-08-02 01:30:08,840: 582463155.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-08-02 01:30:08,870: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-08-02 01:30:08,871: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+WARNING: 2023-08-02 01:30:11,101: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-08-02 01:30:15,795: attrs.py: create: Creating converter from 5 to 3
+DEBUG: 2023-08-02 01:30:19,356: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.2384 - accuracy: 0.9257 - val_loss: 0.1438 - val_accuracy: 0.9568
+DEBUG: 2023-08-02 01:30:23,108: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.1714 - accuracy: 0.9421 - val_loss: 0.1412 - val_accuracy: 0.9521
+DEBUG: 2023-08-02 01:30:26,806: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.194 - accuracy: 0.9245 - val_loss: 0.1161 - val_accuracy: 0.9588
+DEBUG: 2023-08-02 01:30:30,697: keras_callback.py: on_epoch_end: Epoch 40/10000 - loss: 0.1187 - accuracy: 0.9561 - val_loss: 0.12 - val_accuracy: 0.9609
+DEBUG: 2023-08-02 01:30:34,671: keras_callback.py: on_epoch_end: Epoch 50/10000 - loss: 0.1277 - accuracy: 0.9492 - val_loss: 0.1006 - val_accuracy: 0.9663
+DEBUG: 2023-08-02 01:30:38,384: keras_callback.py: on_epoch_end: Epoch 60/10000 - loss: 0.1339 - accuracy: 0.9529 - val_loss: 0.1401 - val_accuracy: 0.9528
+DEBUG: 2023-08-02 01:30:41,888: keras_callback.py: on_epoch_end: Epoch 70/10000 - loss: 0.1109 - accuracy: 0.9536 - val_loss: 0.1068 - val_accuracy: 0.9595
+DEBUG: 2023-08-02 01:30:45,481: keras_callback.py: on_epoch_end: Epoch 80/10000 - loss: 0.1462 - accuracy: 0.9453 - val_loss: 0.1043 - val_accuracy: 0.9622

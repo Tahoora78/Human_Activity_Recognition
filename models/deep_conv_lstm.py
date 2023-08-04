@@ -13,6 +13,8 @@ from tensorflow.keras import backend as K
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
 
+from tensorflow.keras import regularizers
+
 tf.random.set_seed(0)
 
 
@@ -92,25 +94,25 @@ def build_model(
     #     loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=lr), metrics=["accuracy"]
     # )
     model = Sequential()
-    model.add(Conv1D(32, kernel_size=3, input_shape=(128, 6)))
+    model.add(Conv1D(32, kernel_size=3, input_shape=(128, 6), kernel_regularizer = regularizers.l2(0.01)))
     model.add(Activation("relu"))
+    model.add(Dropout(0.3, seed=1))
     model.add(Conv1D(32, kernel_size=3))
+    model.add(Dropout(0.3, seed=1))
     model.add(Activation("relu"))
-    # model.add(Conv1D(64, kernel_size=5))
-    # model.add(Activation("relu"))
+    model.add(Conv1D(32, kernel_size=5))
+    model.add(Activation("relu"))
     # model.add(Conv2D(64, kernel_size=(5,1)))
     # model.add(Activation("relu"))
-    model.add(Reshape((124, 32)))
-    model.add(LSTM(128, activation="tanh", return_sequences=True))
+    model.add(Reshape((120, 32)))
+    model.add(LSTM(32, activation="tanh", return_sequences=True))
     model.add(Dropout(0.5, seed=0))
-    model.add(LSTM(128, activation="tanh"))
-    model.add(Dropout(0.5, seed=1))
-    model.add(LSTM(128, activation="tanh"))
+    model.add(LSTM(32, activation="tanh"))
     model.add(Dropout(0.5, seed=1))
     model.add(Dense(6))
     model.add(Activation("softmax"))
     model.compile(
-        loss="categorical_crossentropy", optimizer=optimizers.Adam(learning_rate=lr), metrics=["accuracy"]
+        loss="categorical_crossentropy", optimizer=optimizers.Adam(lr=0.001), metrics=["accuracy"]
     )
 
     return model

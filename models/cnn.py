@@ -15,6 +15,7 @@ from keras.callbacks import ModelCheckpoint, LearningRateScheduler, EarlyStoppin
 from keras.layers.convolutional import Conv1D
 from keras.layers.convolutional import MaxPooling1D
 
+from tensorflow.keras import regularizers
 
 from src.utils import plot_learning_history, plot_model
 from src.keras_callback import create_callback
@@ -80,12 +81,13 @@ def build_baseline(
     input_shape: Tuple[int, int, int] = (128, 6, 1), output_dim: int = 6, lr: float = 0.001
 ) -> Model:
     model = Sequential()
-    model.add(Conv1D(filters=32, kernel_size=3, activation='relu', input_shape=(128, 6)))
+    model.add(Conv1D(filters=32, kernel_size=3, activation='tanh', input_shape=(128, 6), kernel_regularizer = 
+regularizers.l2(0.001)))
     # model.add(Conv1D(filters=64, kernel_size=3, activation='relu', padding = 'same'))
     model.add(Dropout(0.5))
     model.add(MaxPooling1D(pool_size=2))
     model.add(Flatten())
-    model.add(Dense(32, activation='relu'))
+    model.add(Dense(8, activation='relu'))
     model.add(Dense(6, activation='softmax'))
     checkpoint = ModelCheckpoint("har_weights.h5", monitor='val_acc', verbose=1, 
                              save_best_only=True, save_weights_only=False, mode='auto', save_freq=2)

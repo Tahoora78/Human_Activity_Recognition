@@ -1,0 +1,42 @@
+DEBUG: 2023-08-02 01:27:12,478: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/rnn_lstm_logs/deep-conv-lstm-20230802-012712/deep-conv-lstm-20230802-012712.log
+DEBUG: 2023-08-02 01:27:23,180: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-08-02 01:27:23,181: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-08-02 01:27:23,184: utils.py: check_class_balance: train labels
+DEBUG: 2023-08-02 01:27:23,185: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-08-02 01:27:23,185: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-08-02 01:27:23,186: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-08-02 01:27:23,187: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-08-02 01:27:23,188: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-08-02 01:27:23,189: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-08-02 01:27:23,189: utils.py: check_class_balance: test labels
+DEBUG: 2023-08-02 01:27:23,190: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-08-02 01:27:23,191: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-08-02 01:27:23,193: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-08-02 01:27:23,194: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-08-02 01:27:23,195: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-08-02 01:27:23,196: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-08-02 01:27:23,673: 62444462.py: <module>: /home/tahoora/Projects/college_project/Human_Activity_Recognition/notebooks/rnn_lstm_logs/deep-conv-lstm-20230802-012723/deep-conv-lstm-20230802-012723.log
+DEBUG: 2023-08-02 01:27:33,936: 62444462.py: <module>: X_train.shape=(7406, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-08-02 01:27:33,937: 62444462.py: <module>: y_train.shape=(7406, 1) y_test.shape=(2993, 1)
+DEBUG: 2023-08-02 01:27:33,942: utils.py: check_class_balance: train labels
+DEBUG: 2023-08-02 01:27:33,943: utils.py: check_class_balance: LAYING (0): 1412 samples (19.07 %)
+DEBUG: 2023-08-02 01:27:33,945: utils.py: check_class_balance: WALKING (1): 1224 samples (16.53 %)
+DEBUG: 2023-08-02 01:27:33,947: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 1072 samples (14.47 %)
+DEBUG: 2023-08-02 01:27:33,948: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 987 samples (13.33 %)
+DEBUG: 2023-08-02 01:27:33,950: utils.py: check_class_balance: SITTING (4): 1290 samples (17.42 %)
+DEBUG: 2023-08-02 01:27:33,951: utils.py: check_class_balance: STANDING (5): 1421 samples (19.19 %)
+DEBUG: 2023-08-02 01:27:33,952: utils.py: check_class_balance: test labels
+DEBUG: 2023-08-02 01:27:33,954: utils.py: check_class_balance: LAYING (0): 545 samples (18.21 %)
+DEBUG: 2023-08-02 01:27:33,956: utils.py: check_class_balance: WALKING (1): 496 samples (16.57 %)
+DEBUG: 2023-08-02 01:27:33,957: utils.py: check_class_balance: WALKING_UPSTAIRS (2): 470 samples (15.7 %)
+DEBUG: 2023-08-02 01:27:33,959: utils.py: check_class_balance: WALKING_DOWNSTAIRS (3): 419 samples (14.0 %)
+DEBUG: 2023-08-02 01:27:33,961: utils.py: check_class_balance: SITTING (4): 507 samples (16.94 %)
+DEBUG: 2023-08-02 01:27:33,963: utils.py: check_class_balance: STANDING (5): 556 samples (18.58 %)
+DEBUG: 2023-08-02 01:27:33,997: 582463155.py: <module>: dcl_params={'batch_size': 128, 'epochs': 10000, 'lr': 0.001, 'verbose': 0}
+DEBUG: 2023-08-02 01:27:34,030: 2623015374.py: <module>: X_tr.shape=(5924, 128, 6, 1) X_val.shape=(1482, 128, 6, 1) X_test.shape=(2993, 128, 6, 1)
+DEBUG: 2023-08-02 01:27:34,032: 2623015374.py: <module>: y_tr.shape=(5924, 6) y_val.shape=(1482, 6) y_test.shape=(2993, 6)
+WARNING: 2023-08-02 01:27:36,418: optimizer.py: _process_kwargs: `lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.Adam.
+DEBUG: 2023-08-02 01:27:41,395: attrs.py: create: Creating converter from 5 to 3
+DEBUG: 2023-08-02 01:27:45,211: keras_callback.py: on_epoch_end: Epoch 10/10000 - loss: 0.2993 - accuracy: 0.8979 - val_loss: 0.2239 - val_accuracy: 0.9298
+DEBUG: 2023-08-02 01:27:49,179: keras_callback.py: on_epoch_end: Epoch 20/10000 - loss: 0.1594 - accuracy: 0.9445 - val_loss: 0.1104 - val_accuracy: 0.9575
+DEBUG: 2023-08-02 01:27:53,149: keras_callback.py: on_epoch_end: Epoch 30/10000 - loss: 0.1215 - accuracy: 0.9516 - val_loss: 0.0963 - val_accuracy: 0.9663
